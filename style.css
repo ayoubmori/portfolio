@@ -1,0 +1,30 @@
+body::before{
+  content:'';
+  display: block;
+  height: 50px;
+}
+
+.hh{
+    width: 450px;
+    height: 320px;
+    padding-left: 100px;
+  }
+  #faq{
+    margin-bottom: 40px;
+  }
+  #upp{
+    padding-left: 536Px;
+  }
+  .text-white.wonder:hover{
+      background-color:black;
+  }
+  #btfaq{
+    width: 1000px;
+    margin-left: 150px;
+  }
+  .gets{
+    background-color: white;
+  }
+  .gets:hover{
+    background-color: white;
+  }

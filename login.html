@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Store</title>
+    <link rel="icon" href="icon/ic_local_grocery_store_128_28460.png">
+    <!-- js -->
+    <link  deref rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js">
+    <!-- bootstrapcss -->
+    <!-- css  -->
+    <link rel="stylesheet" href="loginstyle.css">
+    <!-- icons -->
+</head>
+<body>
+<!-- Form-->
+<div class="form">
+    <div class="form-toggle"></div>
+    <div class="form-panel one">
+      <div class="form-header">
+        <h1>Account Login</h1>
+      </div>
+      <div class="form-content">
+        <form class="down">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input id="username" type="text" name="username" required="required"/>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input id="password" type="password" name="password" required="required"/>
+          </div>
+          <div class="form-group">
+            <label class="form-remember">
+              <input type="checkbox"/>Remember Me
+            </label><a class="form-recovery" href="#">Forgot Password?</a>
+          </div>
+          <div class="form-group">
+            <button type="submit">Log In</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="form-panel two">
+      <div class="form-header">
+        <h1>Register Account</h1>
+      </div>
+      <div class="form-content">
+        <form>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input id="username" type="text" name="username" required="required"/>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input id="password" type="password" name="password" required="required"/>
+          </div>
+          <div class="form-group">
+            <label for="cpassword">Confirm Password</label>
+            <input id="cpassword" type="password" name="cpassword" required="required"/>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input id="email" type="email" name="email" required="required"/>
+          </div>
+          <div class="form-group">
+            <button type="submit">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="otherslogin">
+        
+        <a class="image-link " href="https://web.facebook.com/?_rdc=1&_rdr"> <img class="fb" src="img/fb.png" alt=""></a>
+        <a class="image-link " href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Faccounts.google.com%2F&followup=https%3A%2F%2Faccounts.google.com%2F&ifkv=AYZoVheXrCYy_7uRMX09ZTeWERTnvF2hzVc82RbhWr-SHUT1KjW6ENqNOpQj-0VQKr0FTzR0WQhibg&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1895758266%3A1696589986801833&theme=glif"> <img class="google" src="img/goo-removebg-preview.png" alt=""></a>
+    </div>
+  </div>
+</body>
+<script>
+    // Get a reference to the "Get Started" button
+    const getStartedButton = document.querySelector('.btn.btn-info');
+
+    // Add a click event listener to the button
+    getStartedButton.addEventListener('click', function () {
+        // Scroll smoothly to the "Features" section when the button is clicked
+        document.querySelector('#features').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Add a click event listener to the "Back to Top" arrow in the footer
+    document.querySelector('#upp').addEventListener('click', function () {
+        // Scroll smoothly to the top of the page
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Add hover effect to navigation links
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(function (link) {
+        link.addEventListener('mouseover', function () {
+            this.style.color = 'orange';
+        });
+
+        link.addEventListener('mouseout', function () {
+            this.style.color = ''; // Revert to the default color
+        });
+    });
+
+    // Add a simple fade-in effect to the sections
+    const sections = document.querySelectorAll('section');
+    sections.forEach(function (section) {
+        section.style.opacity = 0;
+        section.style.transform = 'translateY(20px)';
+    });
+
+    // Function to animate the sections when they come into view
+    function animateSections() {
+        sections.forEach(function (section) {
+            const sectionTop = section.getBoundingClientRect().top;
+            if (sectionTop < window.innerHeight - 100) {
+                section.style.opacity = 1;
+                section.style.transform = 'translateY(0)';
+            }
+        });
+    }
+
+    // Add a scroll event listener to trigger the animation
+    window.addEventListener('scroll', animateSections);
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="loginjs.js" async></script>
+
+</html>
